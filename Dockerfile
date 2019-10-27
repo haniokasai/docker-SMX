@@ -11,4 +11,4 @@ RUN sh appinstaller.sh
 
 # starting SMX
 WORKDIR /smx/sys
-ENTRYPOINT java -Xss200m -XX:MaxRAM=2000m -XX:+UseSerialGC -Dspring.profiles.active=development -Dfile.encoding=UTF-8 -Dsmx.testmode=true -jar /smx/sys/smx.jar
+ENTRYPOINT java -Xss200m -XX:MaxRAM=2000m -XX:+UseSerialGC -Dspring.profiles.active=production -Dfile.encoding=UTF-8 -Dsmx.testmode=true -jar /smx/sys/smx.jar
