@@ -11,3 +11,4 @@ add-apt-repository \
    stable"
 apt-get update
 apt-get install docker-ce-cli -y
+apt clean
