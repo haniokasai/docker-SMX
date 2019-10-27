@@ -3,8 +3,9 @@ MAINTAINER haniokasai <htek@haniokasai.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 # installing apt-apps
-COPY ./appinstaller.sh  /workdir/appinstaller.sh
-RUN sh appinstaller.sh
+ADD aptinstaller.sh  /aptinstaller.sh
+RUN chmod +x /*.sh & sh /aptinstaller.sh
+
 
 # other works
 ## Nothing
