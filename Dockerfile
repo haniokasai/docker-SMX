@@ -12,4 +12,5 @@ RUN chmod +x /*.sh & sh /aptinstaller.sh
 
 # starting SMX
 WORKDIR /smx/sys
+ENV DOCKER_HOST=/var/run/docker.sock
 ENTRYPOINT java -Xss200m -XX:MaxRAM=2000m -XX:+UseSerialGC -Dspring.profiles.active=production -Dfile.encoding=UTF-8 -Dsmx.testmode=true -jar /smx/sys/smx.jar
